@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/CPU"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:rotation="45"
+            android:layout_margin="5dp"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="#00ACC1"
+            android:layout_above="@id/MenuButton"
+            android:layout_toStartOf="@id/MenuButton" />
+
+        <Button
+            android:id="@+id/GPU"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:rotation="45"
+            android:layout_margin="5dp"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="#C0CA33"
+            android:layout_above="@id/CPU"
+            android:layout_toEndOf="@id/CPU" />
+
+        <Button
+            android:id="@+id/MenuButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:rotation="45"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/RAM"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:rotation="45"
+            android:layout_margin="5dp"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="#C0CA33"
+            android:layout_below="@id/MenuButton"
+            android:layout_toEndOf="@id/MenuButton"/>
+
+        <Button
+            android:id="@+id/SSD"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:rotation="45"
+            android:layout_margin="5dp"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="#00ACC1"
+            android:layout_below="@id/RAM"
+            android:layout_toStartOf="@id/RAM"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/compify_menu_button"
+        android:fontFamily="@font/baumans"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_anchor="@id/MenuButton"
+        app:layout_anchorGravity="center" />
+
+    <TextView
+        android:id="@+id/CpuText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cpu_menu_button"
+        android:fontFamily="@font/baumans"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_anchor="@id/CPU"
+        app:layout_anchorGravity="center" />
+
+    <TextView
+        android:id="@+id/GpuText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gpu_menu_button"
+        android:fontFamily="@font/baumans"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        app:layout_anchor="@id/GPU"
+        app:layout_anchorGravity="center" />
+
+    <TextView
+        android:id="@+id/RamText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ram_menu_button"
+        android:fontFamily="@font/baumans"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        app:layout_anchor="@id/RAM"
+        app:layout_anchorGravity="center" />
+
+    <TextView
+        android:id="@+id/SsdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ssd_menu_button"
+        android:fontFamily="@font/baumans"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        app:layout_anchor="@id/SSD"
+        app:layout_anchorGravity="center"
+        android:elevation="20dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

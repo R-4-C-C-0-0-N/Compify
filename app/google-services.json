@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1046232635250",
+    "firebase_url": "https://compify-55640.firebaseio.com",
+    "project_id": "compify-55640",
+    "storage_bucket": "compify-55640.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046232635250:android:9ded7679a66c8e9f",
+        "android_client_info": {
+          "package_name": "com.example.compify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1046232635250-dtnqsc2u1oq598bal2dcb9tk3ricqi47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ-qPwnnDNWw4HPTdwkUbECtM0wHS-99Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1046232635250-dtnqsc2u1oq598bal2dcb9tk3ricqi47.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

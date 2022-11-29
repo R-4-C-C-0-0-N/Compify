@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Compify</string>
+    <string name="compify_menu_button">COMPIFY</string>
+    <string name="cpu_menu_button">CPU</string>
+    <string name="gpu_menu_button">GPU</string>
+    <string name="ram_menu_button">RAM</string>
+    <string name="ssd_menu_button">SSD</string>
+    <string name="choose_model">CHOOSE MODEL</string>
+    <string name="compare_button">COMPARE</string>
+</resources>

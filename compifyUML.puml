@@ -1,0 +1,111 @@
+@startuml
+interface com.example.compify.Interface.IFirebaseLoadDone {
+~ void onFirebaseLoadSuccess(List<Data>)
+~ void onFirebaseLoadFailed(String)
+}
+class com.example.compify.PartsPickerActivity {
+~ AutoCompleteTextView firstModelACTV
+~ Button compareButton
+~ ImageView firstModelArrow
+~ DatabaseReference compifyDataBase
+~ IFirebaseLoadDone iFirebaseLoadDone
+~ List<Data> dataList
+~ List<String> model_list
+~ List<String> score1_list
+~ List<String> score2_list
+~ List<String> score3_list
+~ List<String> score4_list
+~ List<String> score5_list
+~ List<String> score6_list
+~ List<String> score7_list
+~ Bundle pathRetriever
+~ String path
+~ String firstModelName
+~ String secondModelName
+~ float translationX1
+~ OvershootInterpolator interpolator
+# void onCreate(Bundle)
+- void initActivity()
+- void doAnim()
++ void initDataBase()
++ void populateSpinner()
++ void onFirebaseLoadSuccess(List<Data>)
++ void onFirebaseLoadFailed(String)
++ void getSpinnerItems()
+- void firstModelArrowPressed()
+- void secondModelArrowPressed()
+- void compareButtonPressed()
++ void onClick(View)
+}
+class com.example.compify.Model.Data {
+- String model
++ <<Create>> Data()
++ <<Create>> Data(String,String,String,String,String,String,String,String)
++ String getModel()
++ void setModel(String)
++ String getScore1()
++ void setScore1(String)
++ String getScore2()
++ void setScore2(String)
++ String getScore3()
++ void setScore3(String)
++ String getScore4()
++ void setScore4(String)
++ String getScore5()
++ void setScore5(String)
++ String getScore6()
++ void setScore6(String)
++ String getScore7()
++ void setScore7(String)
+}
+class com.example.compify.SplashScreenActivity {
+~ ImageView splashScreen
+~ OvershootInterpolator interpolator
+~ float translationY
+# void onCreate(Bundle)
+- void initActivity()
+- void doSplash()
+}
+class com.example.compify.MainActivity {
+~ Button menuButton
+~ TextView cpuTextView
+~ float translationX1
+~ boolean isMenuOpen
+~ OvershootInterpolator interpolator
+~ String path
+# void onCreate(Bundle)
+- void initActivity()
+- void menuButtonPressed()
+- void openMenu()
+- void closeMenu()
+- void cpuButtonPressed()
+- void gpuButtonPressed()
+- void ramButtonPressed()
+- void ssdButtonPressed()
++ void onClick(View)
+}
+class com.example.compify.PieChartActivity {
+~ PieChart pieChart1
+~ Bundle dataRetriever
+~ String firstModelName
+~ String secondModelName
+~ Float fFirstModelScore1
+~ Float fSecondModelScore1
+~ Float firstModelAvg1
+~ Float secondModelAvg1
+# void onCreate(Bundle)
++ void initActivity()
++ void getData()
++ void castPointsData()
++ void calculations()
+}
+
+
+com.example.compify.Interface.IFirebaseLoadDone <|.. com.example.compify.PartsPickerActivity
+com.example.compify.OnClickListener <|.. com.example.compify.PartsPickerActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.compify.PartsPickerActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.compify.SplashScreenActivity
+com.example.compify.OnClickListener <|.. com.example.compify.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.compify.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.compify.PieChartActivity
+@enduml

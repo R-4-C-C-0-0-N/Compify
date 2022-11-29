@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".PartsPickerActivity">
+
+    <AutoCompleteTextView
+        android:id="@+id/FirstModelACTV"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/choose_model"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:fontFamily="@font/baumans"
+        android:textStyle="bold"
+        android:background="@drawable/spinner_right_rounded" />
+
+    <ImageView
+        android:id="@+id/FirstModelArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignTop="@id/FirstModelACTV"
+        android:layout_alignBottom="@id/FirstModelACTV"
+        android:layout_alignStart="@id/FirstModelACTV"
+        android:src="@drawable/drop_down_arrow"
+        tools:ignore="ContentDescription" />
+
+    <AutoCompleteTextView
+        android:id="@+id/SecondModelACTV"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/FirstModelACTV"
+        android:layout_marginBottom="80dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/choose_model"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:fontFamily="@font/baumans"
+        android:textStyle="bold"
+        android:background="@drawable/spinner_left_rounded" />
+
+    <ImageView
+        android:id="@+id/SecondModelArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignTop="@id/SecondModelACTV"
+        android:layout_alignBottom="@id/SecondModelACTV"
+        android:layout_alignEnd="@id/SecondModelACTV"
+        android:src="@drawable/drop_down_arrow"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/COMPARE"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/SecondModelACTV"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/circle_button"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/compare_button"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:fontFamily="@font/baumans"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
